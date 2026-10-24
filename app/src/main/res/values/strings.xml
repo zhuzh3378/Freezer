@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">冰箱</string>
+
+    <string name="title_settings">设置</string>
+
+    <string name="home_empty">点击下方 + 号添加要冻结的应用</string>
+    <string name="list_loading">正在加载应用列表…</string>
+    <string name="action_add">添加</string>
+    <string name="action_close_search">关闭搜索</string>
+    <string name="shizuku_not_running">Shizuku 未运行，请先启动</string>
+
+    <string name="priv_status_shizuku_ready">Shizuku 已就绪</string>
+    <string name="priv_status_shizuku_unverified">已授权，还没实测：拨一次开关，或点「验证」跑一条命令</string>
+    <string name="priv_action_verify">验证</string>
+    <string name="priv_status_shizuku_probing">正在确认 Shizuku…</string>
+    <string name="priv_status_shizuku_not_running">Shizuku 服务未启动，请先在 Shizuku 中启动</string>
+    <string name="priv_status_shizuku_not_connected">本应用没连上 Shizuku：先重开冰箱；还不行就打开 Shizuku 启动服务</string>
+    <string name="priv_action_restart">重启</string>
+    <string name="priv_status_shizuku_permission">Shizuku 未授权</string>
+    <string name="priv_status_shizuku_unavailable">已授权，但特权服务绑不上：请先打开一次 Shizuku 应用</string>
+    <string name="priv_status_root">通过 Root (su) 执行命令</string>
+    <string name="priv_action_authorize">授权</string>
+
+    <string name="search_hint">搜索应用</string>
+    <string name="action_search">搜索</string>
+    <string name="action_filters">筛选</string>
+    <string name="title_filters">筛选</string>
+    <string name="filter_section_type">应用类型</string>
+    <string name="filter_section_status">启用状态</string>
+    <string name="filter_reset">重置</string>
+    <string name="filter_type_all">全部应用</string>
+    <string name="filter_type_third_party">第三方</string>
+    <string name="filter_type_system">系统</string>
+    <string name="filter_status_all">全部</string>
+    <string name="filter_status_enabled">已启用</string>
+    <string name="filter_status_disabled">已禁用</string>
+    <string name="filter_section_launchable">启动器</string>
+    <string name="filter_launchable_all">全部</string>
+    <string name="filter_launchable_visible">可显示</string>
+    <string name="filter_launchable_hidden">不显示</string>
+
+    <string name="setting_shape">屏幕形状</string>
+    <string name="shape_auto">自动（跟随系统）</string>
+    <string name="shape_round">圆表（鱼眼缩放）</string>
+    <string name="shape_square">方表（平铺）</string>
+    <string name="shape_detected_round">圆屏</string>
+    <string name="shape_detected_square">方屏</string>
+    <string name="shape_status">系统报告：%1$s · %2$s</string>
+
+    <string name="setting_masquerade">伪装模式</string>
+    <string name="masquerade_switch">伪装成耳机控制器</string>
+    <string name="masquerade_hint">图标和名称要重开应用才变；打开后长按两下才进主界面</string>
+
+    <string name="setting_about">关于</string>
+    <string name="about_open_repo">项目主页</string>
+    <string name="about_author" translatable="false">zhuzh3378</string>
+    <string name="about_intro">冰箱是一块手表上的应用管理器。把不常用的应用「冻」起来——它们在后台不再占内存，也不会出现在启动器里碍眼。它不卸载、不删数据，随时可以解冻。</string>
+    <string name="about_intro_section">简介</string>
+    <string name="about_developer_section">开发者</string>
+    <string name="about_dev_role">设计与开发</string>
+    <string name="about_source_section">开源项目</string>
+    <string name="about_credits_section">参考与致谢</string>
+    <string name="about_credit_shizuku">本应用通过 Shizuku 拿到 shell 权限来执行 pm 命令。</string>
+    <string name="about_credit_zxing">二维码由 zxing 在本地生成，不联网、不申请 INTERNET 权限。</string>
+    <string name="about_changelog_section">版本记录</string>
+    <string name="about_changelog_title">本版内容</string>
+    <string name="about_change_1">主界面跟踪列表，整行冻结/解冻，长按置顶</string>
+    <string name="about_change_2">添加页搜索与三组筛选，勾选不重排</string>
+    <string name="about_change_3">伪装模式：换图标名称，长按两次进入</string>
+    <string name="about_change_4">设置页可导出运行日志，便于远程排障</string>
+    <string name="about_footer" translatable="false">Freezer · Made for Wear OS</string>
+    <string name="about_source_action">开源地址</string>
+    <string name="about_open_on_phone">在手机上打开</string>
+    <string name="about_phone_ok">已发到手机</string>
+    <string name="about_phone_fail">手机没接住：确认手表和手机还连着</string>
+    <string name="qr_description">仓库地址二维码</string>
+    <string name="about_version">版本 %1$s</string>
+
+    <!-- 伪装页的文字：不跟随语言切换，两块都写中文，才像别的设备的页面 -->
+    <string name="masked_app_name" translatable="false">耳机控制器</string>
+    <string name="masked_hint" translatable="false">请连接到手机后继续</string>
+
+    <string name="setting_privilege">权限来源</string>
+    <string name="privilege_shizuku">Shizuku</string>
+    <string name="privilege_root">Root</string>
+
+    <string name="setting_language">应用语言</string>
+    <string name="language_auto">自动</string>
+    <string name="language_zh">中文</string>
+    <string name="language_en">English</string>
+
+
+    <string name="setting_diagnostics">诊断</string>
+    <string name="export_log">导出运行日志</string>
+    <string name="export_log_hint">在电脑上执行 adb pull /storage/emulated/0/Android/data/com.watchfridge.freezer/files/freezer-last.log</string>
+    <string name="log_export_failed">日志写入失败，检查存储空间</string>
+
+    <string name="result_done">操作成功</string>
+    <string name="result_failed">操作失败</string>
+</resources>

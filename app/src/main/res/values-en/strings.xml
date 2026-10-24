@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Freezer</string>
+
+    <string name="title_settings">Settings</string>
+
+    <string name="home_empty">Tap + below to add apps to freeze</string>
+    <string name="list_loading">Loading apps…</string>
+    <string name="action_add">Add</string>
+    <string name="action_close_search">Close search</string>
+    <string name="shizuku_not_running">Shizuku is not running</string>
+
+    <string name="priv_status_shizuku_ready">Shizuku ready</string>
+    <string name="priv_status_shizuku_unverified">Authorized, not verified yet: toggle one app, or tap Verify</string>
+    <string name="priv_action_verify">Verify</string>
+    <string name="priv_status_shizuku_probing">Checking Shizuku…</string>
+    <string name="priv_status_shizuku_not_running">Shizuku service not running, start it in Shizuku</string>
+    <string name="priv_status_shizuku_not_connected">This app lost its Shizuku connection: restart Freezer first; if it persists, open Shizuku and start the service</string>
+    <string name="priv_action_restart">Restart</string>
+    <string name="priv_status_shizuku_permission">Shizuku not authorized</string>
+    <string name="priv_status_shizuku_unavailable">Authorized, but the service won\'t bind: open the Shizuku app once first</string>
+    <string name="priv_status_root">Runs commands through Root (su)</string>
+    <string name="priv_action_authorize">Authorize</string>
+
+    <string name="search_hint">Search apps</string>
+    <string name="action_search">Search</string>
+    <string name="action_filters">Filters</string>
+    <string name="title_filters">Filters</string>
+    <string name="filter_section_type">App type</string>
+    <string name="filter_section_status">State</string>
+    <string name="filter_reset">Reset</string>
+    <string name="filter_type_all">All apps</string>
+    <string name="filter_type_third_party">Third-party</string>
+    <string name="filter_type_system">System</string>
+    <string name="filter_status_all">All</string>
+    <string name="filter_status_enabled">Enabled</string>
+    <string name="filter_status_disabled">Disabled</string>
+    <string name="filter_section_launchable">Launcher</string>
+    <string name="filter_launchable_all">All</string>
+    <string name="filter_launchable_visible">Shown</string>
+    <string name="filter_launchable_hidden">Not shown</string>
+
+    <string name="setting_shape">Screen shape</string>
+    <string name="shape_auto">Auto (follow system)</string>
+    <string name="shape_round">Round (fish-eye)</string>
+    <string name="shape_square">Square (flat)</string>
+    <string name="shape_detected_round">round</string>
+    <string name="shape_detected_square">square</string>
+    <string name="shape_status">Reported: %1$s · %2$s</string>
+
+    <string name="setting_masquerade">Disguise</string>
+    <string name="masquerade_switch">Pretend to be a headset controller</string>
+    <string name="masquerade_hint">Icon and name change after you reopen the app; long press twice to get in</string>
+
+    <string name="setting_about">About</string>
+    <string name="about_open_repo">Project page</string>
+    <string name="about_author" translatable="false">zhuzh3378</string>
+    <string name="about_intro">Freezer is an app manager for your watch. Freeze the apps you rarely use — they stop taking memory in the background and stop cluttering the launcher. Nothing is uninstalled, no data is lost, and any freeze can be undone.</string>
+    <string name="about_intro_section">About</string>
+    <string name="about_developer_section">Developer</string>
+    <string name="about_dev_role">Design and development</string>
+    <string name="about_source_section">Open source</string>
+    <string name="about_credits_section">Credits</string>
+    <string name="about_credit_shizuku">Shell permission for the pm commands comes from Shizuku.</string>
+    <string name="about_credit_zxing">The QR code is generated locally by zxing — no network, no INTERNET permission.</string>
+    <string name="about_changelog_section">Release notes</string>
+    <string name="about_changelog_title">In this version</string>
+    <string name="about_change_1">Tracked list on the main screen, tap to freeze, long press to pin</string>
+    <string name="about_change_2">Search and three filter groups; checking a row no longer reshuffles the list</string>
+    <string name="about_change_3">Disguise mode: different icon and name, two long presses to get in</string>
+    <string name="about_change_4">Run-log export from settings for remote debugging</string>
+    <string name="about_source_action">Source address</string>
+    <string name="about_open_on_phone">Open on phone</string>
+    <string name="about_phone_ok">Sent to your phone</string>
+    <string name="about_phone_fail">Phone did not take it: check the watch is still connected</string>
+    <string name="qr_description">Repository address QR code</string>
+    <string name="about_version">Version %1$s</string>
+
+    <!-- masked_app_name / masked_hint 故意不在这里出现：伪装页要固定中文，不随系统语言翻 -->
+
+    <string name="setting_privilege">Privilege source</string>
+    <string name="privilege_shizuku">Shizuku</string>
+    <string name="privilege_root">Root</string>
+
+    <string name="setting_language">Language</string>
+    <string name="language_auto">Auto</string>
+    <string name="language_zh">中文</string>
+    <string name="language_en">English</string>
+
+
+    <string name="setting_diagnostics">Diagnostics</string>
+    <string name="export_log">Export run log</string>
+    <string name="export_log_hint">On your PC run adb pull /storage/emulated/0/Android/data/com.watchfridge.freezer/files/freezer-last.log</string>
+    <string name="log_export_failed">Could not write the log</string>
+
+    <string name="result_done">Done</string>
+    <string name="result_failed">Failed</string>
+</resources>

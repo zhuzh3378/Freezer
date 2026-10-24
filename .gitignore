@@ -1,0 +1,22 @@
+*.iml
+.gradle/
+.kotlin/
+local.properties
+.idea/
+.DS_Store
+build/
+captures/
+.externalNativeBuild/
+.cxx/
+*.apk
+*.aab
+*.keystore
+*.jks
+
+# 本地签名配置：只写在你机器上，绝不能入库
+keystore.properties
+
+# 调试期留下的临时产物（文件本身保留，只是不提交）
+build.log
+build-aidl.log
+manifest-tree.txt

@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <!--
+        声明 watch feature 但不要求它：required=true 会让不声明该 feature 的设备
+        （普通安卓手表、手机）在装机时直接被系统拒掉。界面仍按 Wear 的样子画，
+        圆/方由设置页那一档决定（见 DisplayShapeStore）。
+    -->
+    <uses-feature
+        android:name="android.hardware.type.watch"
+        android:required="false" />
+
+    <!-- 枚举已安装应用（包括其他开发者的应用） -->
+    <uses-permission android:name="android.permission.QUERY_ALL_PACKAGES" />
+
+    <!--
+        表冠逐格触感走 Wear Compose 的 rotary 行为 → View.performHapticFeedback，
+        由 system_server 触发振动器，不需要 VIBRATE（那条权限只在直接用 Vibrator 时才要）。
+    -->
+
+    <application
+        android:name=".FridgeApplication"
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.Freezer">
+
+        <!--
+            Wear OS 独立应用声明：
+            uses-library 缺失会被系统判定为必须搭配手机端；
+            standalone 元数据缺失会被判定为非独立应用。
+        -->
+        <uses-library
+            android:name="com.google.android.wearable"
+            android:required="false" />
+
+        <meta-data
+            android:name="com.google.android.wearable.standalone"
+            android:value="true" />
+
+        <!--
+            主界面：唯一有界面的 Activity。
+            启动器入口挂在下面两个 activity-alias 上：伪装模式靠切换哪个 alias 是 enabled
+            来换图标与名称，组件自己的 label/icon 是启动器直接读的，不用重装。
+        -->
+        <activity
+            android:name=".MainActivity"
+            android:configChanges="locale|layoutDirection|uiMode"
+            android:exported="true"
+            android:launchMode="singleTask"
+            android:taskAffinity="" />
+
+        <activity-alias
+            android:name=".LauncherNormal"
+            android:enabled="true"
+            android:exported="true"
+            android:icon="@mipmap/ic_launcher"
+            android:label="@string/app_name"
+            android:targetActivity=".MainActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity-alias>
+
+        <activity-alias
+            android:name=".LauncherMasked"
+            android:enabled="false"
+            android:exported="true"
+            android:icon="@drawable/masked_icon"
+            android:label="@string/masked_app_name"
+            android:targetActivity=".MainActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity-alias>
+
+        <!-- Shizuku：通过 ContentProvider 自动注册（官方推荐写法） -->
+        <provider
+            android:name="rikka.shizuku.ShizukuProvider"
+            android:authorities="${applicationId}.shizuku"
+            android:enabled="true"
+            android:exported="true"
+            android:multiprocess="false"
+            android:permission="android.permission.INTERACT_ACROSS_USERS_FULL" />
+
+    </application>
+
+</manifest>
